@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "portfolio"
+    label: "My Portfolio"
+    files:
+      - name: "home"
+        label: "Website Content"
+        file: "content/portfolio.yml"
+        fields:
+          - label: "Your Name"
+            name: "name"
+            widget: "string"
+
+          - label: "Professional Title"
+            name: "title"
+            widget: "string"
+
+          - label: "Introduction"
+            name: "intro"
+            widget: "text"
+
+          - label: "About Me"
+            name: "about"
+            widget: "text"
+
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - label: "Project Name"
+                name: "project_name"
+                widget: "string"
+              - label: "Description"
+                name: "description"
+                widget: "text"
+              - label: "Project Image"
+                name: "image"
+                widget: "image"
